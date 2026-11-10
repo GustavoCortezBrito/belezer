@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+/* Tokens do Design System da Belezer. */
+@theme {
+  --color-papel: #faf9f2;
+  --color-creme: #f0f0e4;
+  --color-broto: #e4eecb;
+  --color-pessego: #fab98f;
+  --color-linha: #dddccb;
+  --color-borda: #87866f;
+  --color-carvao: #1c1c1a;
+  --color-carvao-suave: #5c5b4e;
+  --color-coral: #e84624;
+  --color-on-coral: #0f0f0e;
+  --color-coral-texto: #b5310d;
+  --color-jardim: #2b3a14;
+  --color-on-escuro: #f0f0e4;
+  --color-sucesso: #2b6a3f;
+  --color-alerta: #7a5200;
+  --color-erro: #a31a12;
+
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 28px;
+
+  --shadow-flutuante: 0 18px 48px rgb(28 28 26 / 0.16);
+  --ease-belezer: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@theme inline {
+  --font-display: var(--fonte-gloock), "Times New Roman", serif;
+  --font-texto: var(--fonte-figtree), "Segoe UI", system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--color-papel);
+    color: var(--color-carvao);
+    font-family: var(--font-texto);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-carvao);
+    outline-offset: 2px;
+  }
+
+  .fundo-escuro :focus-visible {
+    outline-color: var(--color-on-escuro);
+  }
+}
+
+@utility display-xl {
+  font-family: var(--font-display);
+  font-size: 44px;
+  line-height: 0.98;
+  letter-spacing: -0.01em;
+
+  @media (width >= 48rem) {
+    font-size: 72px;
+  }
+}
+
+@utility display-lg {
+  font-family: var(--font-display);
+  font-size: 34px;
+  line-height: 1.05;
+
+  @media (width >= 48rem) {
+    font-size: 48px;
+  }
+}
+
+@utility display-md {
+  font-family: var(--font-display);
+  font-size: 32px;
+  line-height: 1.12;
+}
+
+@utility rotulo {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.33;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@utility texto-titulo {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+@utility texto-preco {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+}
+
+@utility brisa {
+  background-color: var(--color-creme);
+  background-image:
+    radial-gradient(60% 70% at 100% 0%, var(--color-pessego) 0%, transparent 70%),
+    radial-gradient(45% 60% at 0% 45%, var(--color-pessego) 0%, transparent 70%),
+    radial-gradient(55% 55% at 35% 0%, var(--color-broto) 0%, transparent 75%);
+}
+
+@utility conteudo {
+  width: 100%;
+  max-width: 1320px;
+  margin-inline: auto;
+  padding-inline: 16px;
+
+  @media (width >= 64rem) {
+    padding-inline: 48px;
+  }
+}
