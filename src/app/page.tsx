@@ -27,16 +27,18 @@ export default async function Home() {
               <li key={categoria}>
                 <Link
                   href={`/produtos?categoria=${categoria}`}
-                  className="group relative flex h-32 flex-col justify-end overflow-hidden rounded-md bg-creme p-4 md:h-44"
+                  className="group relative flex h-32 flex-col justify-end overflow-hidden rounded-md bg-creme p-3 md:h-44 md:p-4"
                 >
                   <span
                     aria-hidden
                     className="absolute -right-8 -top-8 size-28 rounded-[0_100%_0_100%] bg-pessego transition duration-480 ease-belezer group-hover:scale-125 motion-reduce:transition-none md:size-36"
                   />
-                  <span className="relative font-display text-2xl leading-tight md:text-[32px]">
+                  <span className="relative font-display text-lg leading-tight md:text-[32px]">
                     {CATEGORIAS[categoria]}
                   </span>
-                  <span className="relative text-sm text-carvao-suave">{totalPorCategoria(categoria)} produtos</span>
+                  <span className="relative text-sm text-carvao-suave">
+                    {totalPorCategoria(categoria)} {totalPorCategoria(categoria) === 1 ? "produto" : "produtos"}
+                  </span>
                 </Link>
               </li>
             ))}

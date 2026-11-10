@@ -25,7 +25,7 @@ export function DestaqueTopo({ banner }: { banner: Banner }) {
         </div>
 
         <div className="relative mx-auto w-full max-w-sm">
-          <span aria-hidden className="absolute -left-6 -top-6 size-40 rounded-[0_100%_0_100%] bg-coral" />
+          <span aria-hidden className="absolute -left-8 -top-8 size-48 rounded-[0_100%_0_100%] bg-coral" />
           {banner.midia && ehVideo(banner.midia) ? (
             <video
               src={banner.midia}

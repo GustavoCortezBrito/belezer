@@ -17,7 +17,7 @@ const STATUS = {
   },
   pago: {
     titulo: "Pagamento confirmado",
-    texto: "Obrigada pela compra. Já estamos separando o seu pedido.",
+    texto: "Agradecemos a compra. Já estamos separando o seu pedido.",
   },
   cancelado: {
     titulo: "Pedido cancelado",
